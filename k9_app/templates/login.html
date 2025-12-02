@@ -5,29 +5,33 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
-<body>
+<body class="login-bg">
 
-<div class="login-card">
-    
-    <!-- LOGO -->
-    <img src="https://i.imgur.com/IlLxK0b.png" alt="Logo K9" width="100" style="margin-bottom: 15px;">
+<div class="login-wrapper">
+    <div class="login-card">
 
-    <h2 class="login-title">Acceso al Sistema K9</h2>
+        <!-- LOGO -->
+        <div class="logo-container">
+            <img src="https://i.imgur.com/IlLxK0b.png" alt="Logo K9" class="login-logo">
+        </div>
 
-    {% if error %}
-    <p class="error">{{ error }}</p>
-    {% endif %}
+        <h2 class="login-title">Sistema Corporativo K-9</h2>
+        <p class="login-subtitle">Control de Acceso de Visitantes</p>
 
-    <form method="POST">
-        <input class="form-control" type="email" name="email" placeholder="Correo electrónico" required>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
 
-        <input class="form-control" type="password" name="password" placeholder="Contraseña" required>
+        <form method="POST">
+            <input class="form-control" type="email" name="email" placeholder="Correo corporativo" required>
+            <input class="form-control" type="password" name="password" placeholder="Contraseña" required>
 
-        <button type="submit">Ingresar</button>
-    </form>
+            <button type="submit" class="login-btn">Ingresar</button>
+        </form>
+
+    </div>
 </div>
 
 </body>
 </html>
-
 
