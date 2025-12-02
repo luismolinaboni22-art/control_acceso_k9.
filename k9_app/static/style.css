@@ -1,102 +1,55 @@
-/* ========== COLORES PRINCIPALES ========== */
-:root {
-  --color-primary-bg: #1f1f2e;
-  --color-bg: #f5f5f5;
-  --color-text: #222222;
-  --color-accent: #004b8d;
-  --color-accent-hover: #0066cc;
-  --color-error: #d9534f;
-}
+/* ================= DASHBOARD ================= */
 
-/* ========== GENERAL ========== */
-body {
-  background: var(--color-primary-bg);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+.dashboard {
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
-/* ========== TARJETA LOGIN ========== */
-.login-card {
-  width: 350px;
-  background: #ffffff;
-  padding: 35px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  animation: fadeIn 0.6s ease;
-  text-align: center;
-}
-
-/* ANIMACIÓN SUAVE */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* TITULO LOGIN */
-.login-title {
-  color: var(--color-accent);
-  margin-bottom: 20px;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-/* CAMPOS DEL FORM */
-.form-control {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-top: 10px;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-button {
-  background: var(--color-accent);
-  color: white;
-  border: none;
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  margin-top: 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-button:hover {
-  background: var(--color-accent-hover);
-}
-
-/* TEXTO DE ERROR */
-.error {
-  color: var(--color-error);
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* NAVBAR EN OTRAS PÁGINAS */
-.nav {
+/* MENU LATERAL */
+.sidebar {
+  width: 240px;
   background: var(--color-primary-bg);
-  padding: 10px;
   color: white;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.nav a {
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color-accent);
+}
+
+.sidebar a {
   color: white;
-  margin-right: 15px;
   text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  font-size: 16px;
 }
 
-.nav a:hover {
-  color: var(--color-accent-hover);
+.sidebar a:hover {
+  background: var(--color-accent);
 }
 
-/* CONTENEDOR GENERAL */
-.container {
+/* AREA PRINCIPAL */
+.main {
+  flex: 1;
+  background: var(--color-bg);
+  padding: 30px;
+}
+
+.main h1 {
+  color: var(--color-primary-bg);
+  margin-bottom: 15px;
+}
+
+.card {
+  background: white;
   padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
+
