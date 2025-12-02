@@ -2,29 +2,30 @@
 <html>
 <head>
     <title>Login - K9</title>
-
-    <!-- CARGA EL CSS DE STATIC -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-    <div class="login-container">
-        <h2>Acceso al Sistema K9</h2>
+<div class="container" style="max-width: 350px; margin: 80px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0px 0px 10px #cccccc;">
 
-        {% if error %}
-        <p class="error">{{ error }}</p>
-        {% endif %}
+    <h2 style="text-align:center; color: var(--color-primary-bg);">Acceso al Sistema K9</h2>
 
-        <form method="POST">
-            <label>Correo:</label><br>
-            <input type="email" name="email" required><br><br>
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
 
-            <label>Contraseña:</label><br>
-            <input type="password" name="password" required><br><br>
+    <form method="POST">
+        <label>Correo:</label><br>
+        <input class="form-control" type="email" name="email" required><br>
 
-            <button type="submit">Ingresar</button>
-        </form>
-    </div>
+        <label>Contraseña:</label><br>
+        <input class="form-control" type="password" name="password" required><br>
+
+        <button type="submit" style="width:100%; padding:10px; margin-top:10px;">Ingresar</button>
+    </form>
+
+</div>
 
 </body>
 </html>
