@@ -143,6 +143,116 @@
   text-align: center;
   margin-bottom: 10px;
   font-weight: bold;
+}/* ============ LOGIN PREMIUM K-9 ============ */
+
+/* Fondo con imagen corporativa + degradado + oscurecido */
+.login-premium-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+    url("https://images.unsplash.com/photo-1611224923853-80b10c4840a3?auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* Contenedor principal */
+.login-premium-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* Tarjeta estilo vidrio esmerilado */
+.login-premium-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 45px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.55);
+  text-align: center;
+  animation: fadeSlideIn 0.9s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Animación premium */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(-25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* LOGO */
+.login-premium-logo {
+  width: 90px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 5px black);
+}
+
+/* TÍTULO */
+.login-premium-title {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* SUBTÍTULO */
+.login-premium-subtitle {
+  color: #cccccc;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* INPUT PREMIUM */
+.form-control-premium {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+.form-control-premium::placeholder {
+  color: #e0e0e0;
+}
+
+/* BOTÓN PREMIUM */
+.login-premium-btn {
+  width: 100%;
+  padding: 13px;
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.login-premium-btn:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(0,0,0,0.6);
+}
+
+/* ERROR */
+.error {
+  color: #ff4b4b;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
 
 
