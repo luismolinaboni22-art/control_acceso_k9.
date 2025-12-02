@@ -1,49 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Registrar Visitante - K9</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Registrar Visitante</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 
 <body class="container">
 
-<h2>Registrar Visitante</h2>
+    <h2>Registrar Visitante</h2>
 
-{% if success %}
-<p style="color: green; font-weight: bold;">✔ Visitante registrado con éxito</p>
-{% endif %}
+    {% if success %}
+    <p style="color: green; font-weight: bold;">✔ Visitante registrado correctamente</p>
+    {% endif %}
 
-<form method="POST" class="form">
+    <form method="POST" class="form">
+        
+        <label>Nombre completo:</label>
+        <input type="text" name="nombre" required>
 
-    <label>Nombre completo:</label>
-    <input type="text" name="nombre" required>
+        <label>Cédula:</label>
+        <input type="text" name="cedula" required>
 
-    <label>Cédula:</label>
-    <input type="text" name="cedula" required>
+        <label>Empresa:</label>
+        <input type="text" name="empresa" required>
 
-    <label>Empresa:</label>
-    <input type="text" name="empresa" required>
+        <label>Placa del vehículo:</label>
+        <input type="text" name="placa">
 
-    <label>Persona a la cual visita:</label>
-    <input type="text" name="persona_visita" required>
+        <label>Persona a la que visita:</label>
+        <input type="text" name="persona_visita" required>
 
-    <label>Motivo de la visita:</label>
-    <textarea name="proposito" required></textarea>
+        <label>Propósito de la visita:</label>
+        <textarea name="proposito" required></textarea>
 
-    <label>Placa del vehículo:</label>
-    <input type="text" name="placa">
+        <button type="submit">Registrar</button>
+    </form>
 
-    <label>¿Cuenta con inducción de seguridad?</label>
-    <select name="induccion" required>
-        <option value="Sí">Sí</option>
-        <option value="No">No</option>
-    </select>
-
-    <button type="submit">Registrar</button>
-</form>
-
-<br>
-<a href="/dashboard">⬅ Volver</a>
+    <br>
+    <a href="/dashboard">⬅ Volver al Dashboard</a>
 
 </body>
 </html>
