@@ -51,5 +51,98 @@
   border-radius: 10px;
   box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
   margin-bottom: 20px;
+}/* ========= LOGIN CORPORATIVO K-9 ========= */
+
+/* Fondo degradado corporativo */
+.login-bg {
+  background: linear-gradient(135deg, #0f182e, #1f1f2e, #004b8d);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* Contenedor principal */
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* Tarjeta */
+.login-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 35px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.35);
+  animation: fadeSlide 0.6s ease;
+}
+
+/* Animación */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo */
+.login-logo {
+  width: 100px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+/* Título */
+.login-title {
+  text-align: center;
+  color: var(--color-accent);
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+/* Subtítulo */
+.login-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* Botón elegante */
+.login-btn {
+  background: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.25s ease;
+}
+
+.login-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+/* Inputs */
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+/* Error */
+.error {
+  color: var(--color-error);
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
 
