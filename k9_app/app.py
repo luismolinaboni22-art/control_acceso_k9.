@@ -28,6 +28,25 @@ def dashboard():
     if "user" not in session:
         return redirect("/login")
     return render_template("dashboard.html")
+@app.route("/registrar", methods=["GET", "POST"])
+def registrar():
+    if "user" not in session:
+        return redirect("/login")
+
+    if request.method == "POST":
+        nombre = request.form["nombre"]
+        cedula = request.form["cedula"]
+        empresa = request.form["empresa"]
+        placa = request.form["placa"]
+        persona_visita = request.form["persona_visita"]
+        proposito = request.form["proposito"]
+
+        # Aquí luego guardaremos en base de datos
+        print("Visitante registrado:", nombre, cedula, empresa, placa, persona_visita, proposito)
+
+        return render_template("registrar.html", success=True)
+
+    return render_template("registrar.html")
 
 
 # ---------- RUTA PRINCIPAL ----------
