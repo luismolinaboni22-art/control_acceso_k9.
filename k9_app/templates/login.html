@@ -7,26 +7,27 @@
 
 <body>
 
-<div class="container" style="max-width: 350px; margin: 80px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0px 0px 10px #cccccc;">
+<div class="login-card">
+    
+    <!-- LOGO -->
+    <img src="https://i.imgur.com/IlLxK0b.png" alt="Logo K9" width="100" style="margin-bottom: 15px;">
 
-    <h2 style="text-align:center; color: var(--color-primary-bg);">Acceso al Sistema K9</h2>
+    <h2 class="login-title">Acceso al Sistema K9</h2>
 
     {% if error %}
     <p class="error">{{ error }}</p>
     {% endif %}
 
     <form method="POST">
-        <label>Correo:</label><br>
-        <input class="form-control" type="email" name="email" required><br>
+        <input class="form-control" type="email" name="email" placeholder="Correo electrónico" required>
 
-        <label>Contraseña:</label><br>
-        <input class="form-control" type="password" name="password" required><br>
+        <input class="form-control" type="password" name="password" placeholder="Contraseña" required>
 
-        <button type="submit" style="width:100%; padding:10px; margin-top:10px;">Ingresar</button>
+        <button type="submit">Ingresar</button>
     </form>
-
 </div>
 
 </body>
 </html>
+
 
