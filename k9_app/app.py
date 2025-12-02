@@ -23,6 +23,11 @@ def login():
             return render_template("login.html", error="Usuario o contraseña incorrectos")
 
     return render_template("login.html")
+@app.route("/dashboard")
+def dashboard():
+    if "user" not in session:
+        return redirect("/login")
+    return render_template("dashboard.html")
 
 
 # ---------- RUTA PRINCIPAL ----------
