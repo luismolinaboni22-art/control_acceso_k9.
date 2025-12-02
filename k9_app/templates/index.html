@@ -2,17 +2,20 @@
 <html>
 <head>
     <title>Sistema K9</title>
-
-    <!-- CARGA EL CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>Sistema K9 funcionando</h1>
+<div class="nav">
+    <a href="/">Inicio</a>
+    <a href="/logout">Cerrar sesión</a>
+</div>
 
-        <a class="logout" href="/logout">Cerrar sesión</a>
-    </div>
+<div class="container">
+    <h1 style="color: var(--color-primary-bg);">Sistema K9 funcionando</h1>
+    <p>Bienvenido al panel principal.</p>
+</div>
 
 </body>
 </html>
