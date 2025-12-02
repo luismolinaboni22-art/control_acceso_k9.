@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visitantes en Sitio - K9</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="container">
+
+<h2>Visitantes Actualmente en Sitio</h2>
+
+<table class="table-premium">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Cédula</th>
+            <th>Empresa</th>
+            <th>Persona que visita</th>
+            <th>Motivo</th>
+            <th>Placa</th>
+            <th>Inducción</th>
+            <th>Entrada</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for v in visitantes %}
+        <tr>
+            <td>{{ v.nombre }}</td>
+            <td>{{ v.cedula }}</td>
+            <td>{{ v.empresa }}</td>
+            <td>{{ v.persona_visita }}</td>
+            <td>{{ v.proposito }}</td>
+            <td>{{ v.placa }}</td>
+            <td>{{ v.induccion }}</td>
+            <td>{{ v.hora_entrada }}</td>
+            <td>
+                <a href="/salida/{{ v.id }}" class="btn-premium">Salida</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<br>
+<a href="/dashboard">⬅ Volver</a>
+
+</body>
+</html>
